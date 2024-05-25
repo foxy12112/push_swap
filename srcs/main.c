@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:31:59 by ldick             #+#    #+#             */
-/*   Updated: 2024/05/22 11:11:23 by ldick            ###   ########.fr       */
+/*   Updated: 2024/05/24 08:23:23 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,19 @@
 
 int	main(int argc, char *argv[])
 {
-	printf("abcde");
+	int		o;
+	int		i;
+	int		k;
+
+	k = 1;
+	o = 0;
+	i = 0;
+	while (i < argc)
+	{
+		o += ft_wordcount(argv[k], ' ');
+		k++;
+		i++;
+	}
+	printf("%d\n", o);
 	return (0);
 }
