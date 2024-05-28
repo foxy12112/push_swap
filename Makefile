@@ -6,7 +6,7 @@
 #    By: ldick <ldick@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 09:31:08 by ldick             #+#    #+#              #
-#    Updated: 2024/05/23 05:48:03 by ldick            ###   ########.fr        #
+#    Updated: 2024/05/28 10:09:14 by ldick            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,14 @@ NAME = push_swap
 
 SRCS_DIR = srcs/
 
-SRCS =	srcs/main.c	\
+SRCS =	srcs/main.c			\
+		srcs/arguments.c	\
 
 COMPILER = cc
 
 OBJS = $(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+# CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/05/22 11:11:13 by ldick            ###   ########.fr       */
+/*   Updated: 2024/05/28 10:35:12 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,18 @@
 # include <stdlib.h>
 
 		//structs//
-// typedef struct s_stack
-// {
-// } t_stack;
+typedef struct s_stack
+{
+	int					value;
+	int					position;
+	int					target_pos;
+	int					cost_a;
+	int					cost_b;
+	int					index;
+	struct s_stack		*next;
+	struct s_stack		*prev;
+}	t_stack;
+
+char	*parsing(int argc, char **argv, t_stack **stack_a);
 
 #endif
