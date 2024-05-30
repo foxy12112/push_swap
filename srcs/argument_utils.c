@@ -1,45 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arguments.c                                        :+:      :+:    :+:   */
+/*   argument_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 09:36:15 by ldick             #+#    #+#             */
-/*   Updated: 2024/05/28 11:24:36 by ldick            ###   ########.fr       */
+/*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
+/*   Updated: 2024/05/30 16:40:57 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-char	*parsing(int argc, char **argv, t_stack **stack_a)
+int	len_of_args(int argc, char *argv[])
 {
-	char	*temp;
-	char	*result;
-	char	*tmp;
-	int		i;
-	int		j;
+	int	i;
+	int	j;
+	int	l;
 
-	while (argv[i][j] && j < argc)
+	l = 0;
+	i = 0;
+	j = 0;
+	while (i < argc)
 	{
-		temp[i] = argv[i][j];
-		if (!argv[i][j])
+		if (argv[j][i] == '\0' && i < argc)
 		{
-			temp[i++] = ' ';
 			i++;
-			j++;
+			j = 0;
 		}
-		i++;
+		j++;
+		l++;
 	}
-	return (temp);
 }
 
-void	parse_string(t_stack **stack_a, char *argv)
+char	make_line(int argc, char *argv[])
 {
-	char		**arg_list;
-	t_stack		new;
-	long int	num;
-	int			i;
+	int		i;
+	int		j;
+	char	*string;
 
-	arg_list = 
+	i = 0;
+	j = 0;
+	while (i < argc)
+	{
+		
+	}
 }
