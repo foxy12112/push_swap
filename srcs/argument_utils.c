@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/05/31 13:14:54 by ldick            ###   ########.fr       */
+/*   Updated: 2024/05/31 13:37:38 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	len_of_args(int argc, char *argv[])
 	return (total_len);
 }
 
-char	make_line(int argc, char *argv[])
+char	*make_line(int argc, char *argv[])
 {
 	int		lenght;
 	int		i;
@@ -41,12 +41,20 @@ char	make_line(int argc, char *argv[])
 
 	i = 1;
 	lenght = len_of_args(argc, argv);
-	string = (char *)malloc(lenght + 1);
+	string = (char *)malloc(lenght + argc);
 	if (!string)
-		return (1);
+		return (NULL);
 	string[0] = '\0';
 	while (i < argc)
 	{
-		ft_strlcat()
+		ft_strcat(string, argv[i]);
+		if (i < argc - 1)
+			ft_strcat(string, " ");
 	}
+	return (string);
+}
+int main(int argc, char *argv[])
+{
+	printf("%s\n", make_line(argc, argv));
+	return 0;
 }

@@ -6,7 +6,7 @@
 #    By: ldick <ldick@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 09:31:08 by ldick             #+#    #+#              #
-#    Updated: 2024/05/28 10:09:14 by ldick            ###   ########.fr        #
+#    Updated: 2024/05/31 13:28:17 by ldick            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,7 @@ NAME = push_swap
 
 SRCS_DIR = srcs/
 
-SRCS =	srcs/main.c			\
-		srcs/arguments.c	\
+SRCS =	srcs/argument_utils.c	\
 
 COMPILER = cc
 
