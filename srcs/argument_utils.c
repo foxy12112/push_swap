@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/01 16:28:31 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/02 14:05:06 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ char	*make_line(int argc, char *argv[])
 
 int	main(int argc, char *argv[])
 {
-	t_list	**stack;
 	char	**milk;
 	int		**milkmilk;
 	size_t	i;
@@ -61,13 +60,12 @@ int	main(int argc, char *argv[])
 	j = 0;
 	i = 0;
 	milk = ft_split(make_line(argc, argv), ' ');
-	stack = (t_list **)malloc(sizeof(t_list));
-	*stack = NULL;
-	while(i < (size_t)argc - 1)
+	milkmilk = NULL;
+	while (i < (size_t)argc - 1)
 	{
-		while(j < ft_strlen(milk[i]))
+		while (j < ft_strlen(milk[i]))
 		{
-			stack[i][1] = ft_atoi(milk[i]);
+			milkmilk[i][1] = ft_atoi(milk[i]);
 			j++;
 		}
 		j = 0;
