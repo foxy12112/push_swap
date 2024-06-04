@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/02 14:05:06 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/04 14:33:57 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,33 +50,33 @@ char	*make_line(int argc, char *argv[])
 	return (str);
 }
 
-int	main(int argc, char *argv[])
+int	**make_double(int argc, char *argv[])
 {
-	char	**milk;
-	int		**milkmilk;
-	size_t	i;
-	size_t	j;
+	char	*string;
+	int		i;
+	char	**strong;
+	int		**arr;
 
-	j = 0;
 	i = 0;
-	milk = ft_split(make_line(argc, argv), ' ');
-	milkmilk = NULL;
-	while (i < (size_t)argc - 1)
+	arr = malloc((argc - 1) * sizeof(int *));
+	string = make_line(argc, argv);
+	strong = ft_split(string, ' ');
+	while (i < argc - 1)
 	{
-		while (j < ft_strlen(milk[i]))
-		{
-			milkmilk[i][1] = ft_atoi(milk[i]);
-			j++;
-		}
-		j = 0;
+		arr[i] = malloc(sizeof(int));
+		*arr[i] = ft_atoi(strong[i]);
 		i++;
 	}
+	return (arr);
+}
+int main(int argc, char *argv[])
+{
+	int	i;
+	int **arr;
+
 	i = 0;
-	while (i++ < (size_t)argc - 1)
-	{
-		printf("\n");
-		printf("%d", milkmilk[i][1]);
-	}
-	free(milkmilk);
-	return (0);
+	arr = make_double(argc, argv);
+	while (i++ < argc - 1)
+		printf("%d\n", *arr[i]);
+	return 0;
 }
