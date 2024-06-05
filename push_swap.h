@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/04 13:25:58 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/05 15:24:18 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@
 		//structs//
 typedef struct s_stack
 {
+	int					**stack_a;
+	int					**stack_b;
+	int					line_a;
 	int					value;
 	int					position;
 	int					target_pos;

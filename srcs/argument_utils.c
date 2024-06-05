@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/04 14:33:57 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/05 16:06:14 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,15 @@ int	**make_double(int argc, char *argv[])
 	}
 	return (arr);
 }
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	int	i;
-	int **arr;
+	t_stack	stack_a;
+	// int		**arr;
+	int		i;
 
 	i = 0;
-	arr = make_double(argc, argv);
-	while (i++ < argc - 1)
-		printf("%d\n", *arr[i]);
-	return 0;
+	stack_a.stack_a = make_double(argc, argv);
+	while (i < argc - 1)
+		printf("%d\n", *stack_a.stack_a[i++]);
+	return (0);
 }
