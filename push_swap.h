@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/05 15:24:18 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/06 13:33:11 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,10 @@ typedef struct s_stack
 }	t_stack;
 
 char	*parsing(int argc, char **argv, t_stack **stack_a);
+int	ft_is_number(char *str);
+int	ft_dup_check(int **nbr, int size);
+int	ft_check_zero(char *nbr);
+int	full_check(int argc, char *argv[]);
+
 
 #endif

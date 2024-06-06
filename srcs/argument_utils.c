@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/05 16:06:14 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/06 13:39:32 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,28 @@ int	**make_double(int argc, char *argv[])
 	}
 	return (arr);
 }
-int	main(int argc, char *argv[])
+
+int	full_check(int argc, char *argv[])
 {
-	t_stack	stack_a;
-	// int		**arr;
+	t_stack	stack;
 	int		i;
+	char	*str;
+	int		result;
 
 	i = 0;
-	stack_a.stack_a = make_double(argc, argv);
+	str = make_line(argc, argv);
+	stack.stack_a = make_double(argc, argv);
+	if (ft_is_number(str))
+		return (0);
+	result = ft_dup_check(stack.stack_a, argc - 1);
+	if (result)
+	{
+		ft_printf("error");
+		return (1);
+	}
 	while (i < argc - 1)
-		printf("%d\n", *stack_a.stack_a[i++]);
+	{
+		printf("%d\n", *stack.stack_a[i++]);
+	}
 	return (0);
 }

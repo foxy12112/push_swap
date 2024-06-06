@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 11:33:41 by ldick             #+#    #+#             */
-/*   Updated: 2024/05/30 15:53:30 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/06 13:43:00 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,25 @@ int	ft_is_number(char *str)
 	i = 0;
 	if ((str[i] == '-' || str[i] == '+') && str[i + 1] != '\0')
 		i++;
-	while (str[i] && ft_isdigit(str[i]))
+	while (str[i] && (ft_isdigit(str[i]) || str[i] == ' '))
 		i++;
-	if (str[i] != '\0' && !ft_isdigit(str[i]))
+	if (str[i] != '\0' && (!ft_isdigit(str[i]) || str[i] == ' '))
 		return (1);
 	return (0);
 }
 
-int	ft_dup_check(char **nbr)
+int	ft_dup_check(int **nbr, int size)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (nbr[i])
+	while (i < size)
 	{
-		j = 0;
-		while (nbr[j])
+		j = i + 1;
+		while (j < size)
 		{
-			if (j != i && ft_strcmp(nbr[i], nbr[j]) == 0)
+			if (*nbr[i] == *nbr[j])
 				return (1);
 			j++;
 		}
@@ -45,6 +45,7 @@ int	ft_dup_check(char **nbr)
 	}
 	return (0);
 }
+
 
 int	ft_check_zero(char *nbr)
 {
