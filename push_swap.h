@@ -6,13 +6,13 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/06 13:33:11 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/07 17:59:20 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# define MIN_INT -2147483648
+# define MIN_INT -2147483647
 # define MAX_INT 2147483647
 
 		//includes//
@@ -41,7 +41,7 @@ char	*parsing(int argc, char **argv, t_stack **stack_a);
 int	ft_is_number(char *str);
 int	ft_dup_check(int **nbr, int size);
 int	ft_check_zero(char *nbr);
-int	full_check(int argc, char *argv[]);
+int	full_check(int argc, char *argv[], t_stack *stack);
 
 
 #endif

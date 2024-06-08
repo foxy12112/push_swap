@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 11:33:41 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/06 13:43:00 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/07 09:52:17 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int	ft_dup_check(int **nbr, int size)
 	return (0);
 }
 
-
 int	ft_check_zero(char *nbr)
 {
 	int	i;
@@ -54,7 +53,7 @@ int	ft_check_zero(char *nbr)
 	i = 0;
 	if (nbr[i] == '+' || nbr[i] == '-')
 		i++;
-	while(nbr[i] && nbr[i] == '0')
+	while (nbr[i] && nbr[i] == '0')
 		i++;
 	if (nbr[i] != '\0')
 		return (0);
