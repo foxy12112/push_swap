@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/08 17:11:18 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/09 15:23:58 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,13 @@ int	**make_double(int argc, char *argv[])
 	if (!arr)
 		return (NULL);
 	strong = ft_split(string, ' ');
-	while (i++ < argc - 1)
+	while (i < argc - 1)
 	{
 		arr[i] = malloc(sizeof(int));
 		if (!arr)
 			return (NULL);
 		*arr[i] = ft_atoi(strong[i]);
+		i++;
 	}
 	return (arr);
 }
@@ -83,16 +84,16 @@ int	full_check(int argc, char *argv[], t_stack *stack)
 		return (1);
 	if (argc > 2)
 		stack->stack_a = make_double(argc, argv);
-	else if (argc == 2)
-		stack->stack_a = make_double(argc, &str);
-	if (ft_is_number(str) || ft_check_zero(str) || !stack->stack_a)
+	if (argc == 2)
+		stack->stack_a = make_double(ft_wordcount(argv[1], ' '), argv);
+	if (ft_is_number(str) || ft_check_zero(str))
 		return (1);
 	if (ft_dup_check(stack->stack_a, argc - 1))
 		return (1);
-	while (i++ < ft_wordcount(str, ' '))
+	while (i < ft_wordcount(str, ' '))
 	{
-		if (*stack->stack_a[i] < MIN_INT || *stack->stack_a[i] > MAX_INT)
-			return (1);
+		// if (*stack->stack_a[i] < MIN_INT || *stack->stack_a[i] > MAX_INT)
+		// 	return (1);
 		ft_printf("%d\n", *stack->stack_a[i]);
 		i++;
 	}
