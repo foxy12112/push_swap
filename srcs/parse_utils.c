@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 11:33:41 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/07 09:52:17 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/12 09:52:32 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_is_number(char *str)
 	return (0);
 }
 
-int	ft_dup_check(int **nbr, int size)
+int	ft_dup_check(int *nbr, int size)
 {
 	int	i;
 	int	j;
@@ -37,7 +37,7 @@ int	ft_dup_check(int **nbr, int size)
 		j = i + 1;
 		while (j < size)
 		{
-			if (*nbr[i] == *nbr[j])
+			if (nbr[i] == nbr[j])
 				return (1);
 			j++;
 		}
@@ -57,5 +57,19 @@ int	ft_check_zero(char *nbr)
 		i++;
 	if (nbr[i] != '\0')
 		return (0);
+	return (1);
+}
+
+int	ft_is_sorted(int *stack, int len)
+{
+	int	i;
+	
+	i = 0;
+	while (i < len - 1)
+	{
+		if (stack[i] > stack[i + 1])
+			return (0);
+		i++;
+	}
 	return (1);
 }
