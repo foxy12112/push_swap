@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/14 12:11:24 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/16 13:32:31 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ int	full_check(int argc, char *argv[], t_stack *stack)
 		i++;
 		stack->len_a++;
 	}
+	stack->len_start = stack->len_a;
 	return (0);
 }
 

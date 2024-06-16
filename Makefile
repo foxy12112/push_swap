@@ -6,7 +6,7 @@
 #    By: ldick <ldick@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 09:31:08 by ldick             #+#    #+#              #
-#    Updated: 2024/06/15 10:35:33 by ldick            ###   ########.fr        #
+#    Updated: 2024/06/16 13:11:45 by ldick            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,10 @@ SRCS_DIR = srcs/
 SRCS =	srcs/argument_utils.c	\
 		srcs/parse_utils.c		\
 		srcs/main.c				\
+		srcs/weirdprint.c		\
+		srcs/sort_utils.c		\
+		srcs/utils.c			\
+		srcs/sort.c				\
 		srcs/operations/rotate.c\
 		srcs/operations/push.c	\
 		srcs/operations/swap.c	\

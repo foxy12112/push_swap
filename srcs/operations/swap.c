@@ -6,13 +6,13 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:33:09 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/12 11:32:19 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/16 11:13:13 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	swap_a(t_stack *stack)
+void	swap_a(t_stack *stack, char *printdis)
 {
 	int	tmp;
 
@@ -21,10 +21,10 @@ void	swap_a(t_stack *stack)
 	tmp = stack->stack_a[0];
 	stack->stack_a[0] = stack->stack_a[1];
 	stack->stack_a[1] = tmp;
-	ft_printf("sa\n");
+	printdisstuff(printdis);
 }
 
-void	swap_b(t_stack *stack)
+void	swap_b(t_stack *stack, char *printdis)
 {
 	int	tmp;
 
@@ -33,10 +33,10 @@ void	swap_b(t_stack *stack)
 	tmp = stack->stack_b[0];
 	stack->stack_b[0] = stack->stack_a[1];
 	stack->stack_a[1] = tmp;
-	ft_printf("sb\n");
+	printdisstuff(printdis);
 }
 
-void	swap_both(t_stack *stack)
+void	swap_both(t_stack *stack, char *printdis)
 {
 	int	tmp;
 	int	temp;
@@ -49,5 +49,5 @@ void	swap_both(t_stack *stack)
 	stack->stack_b[0] = stack->stack_a[1];
 	stack->stack_a[1] = tmp;
 	stack->stack_b[1] = tmp;
-	ft_printf("ss\n");
+	printdisstuff(printdis);
 }

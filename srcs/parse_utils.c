@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 11:33:41 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/12 09:52:32 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/16 11:29:18 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,19 +57,5 @@ int	ft_check_zero(char *nbr)
 		i++;
 	if (nbr[i] != '\0')
 		return (0);
-	return (1);
-}
-
-int	ft_is_sorted(int *stack, int len)
-{
-	int	i;
-	
-	i = 0;
-	while (i < len - 1)
-	{
-		if (stack[i] > stack[i + 1])
-			return (0);
-		i++;
-	}
 	return (1);
 }

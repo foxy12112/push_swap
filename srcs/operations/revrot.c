@@ -6,13 +6,13 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 12:23:55 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/14 12:35:00 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/16 11:12:53 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	revrot_a(t_stack *stack)
+void	revrot_a(t_stack *stack, char *printdis)
 {
 	int	tmp;
 	int	i;
@@ -27,10 +27,10 @@ void	revrot_a(t_stack *stack)
 		i--;
 	}
 	stack->stack_a[i] = tmp;
-	ft_printf("rra\n");
+	printdisstuff(printdis);
 }
 
-void	revrot_b(t_stack *stack)
+void	revrot_b(t_stack *stack, char *printdis)
 {
 	int	tmp;
 	int	i;
@@ -45,10 +45,10 @@ void	revrot_b(t_stack *stack)
 		i--;
 	}
 	stack->stack_b[i] = tmp;
-	ft_printf("rrb\n");
+	printdisstuff(printdis);
 }
 
-void	revrot_both(t_stack *stack)
+void	revrot_both(t_stack *stack, char *printdis)
 {
 	int	tmp;
 	int	temp;
@@ -73,5 +73,5 @@ void	revrot_both(t_stack *stack)
 	}
 	stack->stack_a[i] = temp;
 	stack->stack_b[i] = tmp;
-	ft_printf("rrr\n");
+	printdisstuff(printdis);
 }

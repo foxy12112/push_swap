@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/15 10:28:48 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/16 13:09:18 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_stack
 	int					errornum;
 	int					len_a;
 	int					len_b;
+	int					len_start;
 }	t_stack;
 
 typedef struct s_moves
@@ -44,19 +45,26 @@ int		ft_dup_check(int *nbr, int size);
 int		ft_check_zero(char *nbr);
 int		full_check(int argc, char *argv[], t_stack *stack);
 int		ft_is_sorted(int *stack, int len);
+void	printdisstuff(char *printdis);
+void	ft_highest_to_top(t_stack *stack);
+int		ft_lower_sqrt_search(int b, int low, int high);
+int		ft_lower_sqrt(int nb);
+void	ft_sort(t_stack *stack);
+void	sort_three(t_stack *stack);
+void	sort_five(t_stack *stack);
 
 //		operations
-void	rotate_a(t_stack *stack);
-void	rotate_b(t_stack *stack);
-void	rotate_both(t_stack *stack);
-void	revrot_a(t_stack *stack);
-void	revrot_b(t_stack *stack);
-void	revrot_both(t_stack *stack);
-void	push_a(t_stack *stack);
-void	push_b(t_stack *stack);
-void	swap_a(t_stack *stack);
-void	swap_b(t_stack *stack);
-void	swap_both(t_stack *stack);
+void	rotate_a(t_stack *stack, char *printdis);
+void	rotate_b(t_stack *stack, char *printdis);
+void	rotate_both(t_stack *stack, char *printdis);
+void	revrot_a(t_stack *stack, char *printdis);
+void	revrot_b(t_stack *stack, char *printdis);
+void	revrot_both(t_stack *stack, char *printdis);
+void	push_a(t_stack *stack, char *printdis);
+void	push_b(t_stack *stack, char *printdis);
+void	swap_a(t_stack *stack, char *printdis);
+void	swap_b(t_stack *stack, char *printdis);
+void	swap_both(t_stack *stack, char *printdis);
 
 
 #endif

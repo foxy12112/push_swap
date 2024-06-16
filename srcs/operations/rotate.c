@@ -6,13 +6,13 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 10:30:50 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/14 12:08:41 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/16 11:13:04 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	rotate_a(t_stack *stack)
+void	rotate_a(t_stack *stack, char *printdis)
 {
 	int	tmp;
 	int	i;
@@ -27,10 +27,10 @@ void	rotate_a(t_stack *stack)
 		i++;
 	}
 	stack->stack_a[i] = tmp;
-	ft_printf("ra\n");
+	printdisstuff(printdis);
 }
 
-void	rotate_b(t_stack *stack)
+void	rotate_b(t_stack *stack, char *printdis)
 {
 	int	tmp;
 	int	i;
@@ -45,10 +45,10 @@ void	rotate_b(t_stack *stack)
 		i++;
 	}
 	stack->stack_b[i] = tmp;
-	ft_printf("rb\n");
+	printdisstuff(printdis);
 }
 
-void	rotate_both(t_stack *stack)
+void	rotate_both(t_stack *stack, char *printdis)
 {
 	int	tmp;
 	int	temp;
@@ -72,5 +72,5 @@ void	rotate_both(t_stack *stack)
 		i++;
 	}
 	stack->stack_a[i] = tmp;
-	ft_printf("rr\n");
+	printdisstuff(printdis);
 }
