@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/16 13:09:18 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/17 09:58:38 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int		ft_lower_sqrt(int nb);
 void	ft_sort(t_stack *stack);
 void	sort_three(t_stack *stack);
 void	sort_five(t_stack *stack);
+void	bubble_sort(int *array, int len);
 
 //		operations
 void	rotate_a(t_stack *stack, char *printdis);

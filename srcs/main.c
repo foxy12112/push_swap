@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:31:59 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/16 13:32:45 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/17 11:29:47 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	main(int argc, char *argv[])
 	stack.len_b = 0;
 	if (ft_is_sorted(stack.stack_a, stack.len_a))
 		return (free(stack.stack_a), 0);
+	bubble_sort(stack.stack_a, stack.len_a);
 	main_sort(&stack);
 	// while (i < stack.len_a)
 	// {

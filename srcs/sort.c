@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 12:38:16 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/16 13:12:25 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/17 11:48:52 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,32 @@ void	sort_five(t_stack *stack)
 		swap_b(stack, "sb");
 	push_a(stack, "pa");
 	push_a(stack, "pa");
+}
+
+void	bubble_sort(int *array, int len)
+{
+	int	i;
+	int	j;
+	int	tmp;
+	int	swapped;
+
+	i = 0;
+	swapped = 1;
+	while (swapped)
+	{
+		swapped = 0;
+		j = 0;
+		while (j < len - i - 1)
+		{
+			if (array[j] > array[j + 1])
+			{
+				tmp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = tmp;
+				swapped = 1;
+			}
+			j++;
+		}
+		i++;
+	}
 }
