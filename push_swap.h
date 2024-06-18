@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/18 11:38:34 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/18 13:15:49 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,5 @@ void	push_b(t_stack *stack, char *printdis);
 void	swap_a(t_stack *stack, char *printdis);
 void	swap_b(t_stack *stack, char *printdis);
 void	swap_both(t_stack *stack, char *printdis);
-
 
 #endif

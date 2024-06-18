@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 11:33:41 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/17 15:37:31 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/18 13:15:05 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int	ft_is_number(char *str)
 	while (str[i] && ((ft_isdigit(str[i]) || str[i] == ' ') || str[i] == '-'
 			|| str[i] == '+'))
 		i++;
-	if (str[i] != '\0' && (!ft_isdigit(str[i]) || str[i] == ' ' || str[i] == '-'
+	if (str[i] != '\0' && (!ft_isdigit(str[i])
+			|| str[i] == ' ' || str[i] == '-'
 			|| str[i] == '+'))
 		return (1);
 	return (0);
@@ -50,7 +51,7 @@ int	ft_dup_check(int *nbr, int size)
 
 int	ft_check_zero(char *nbr)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (nbr[i] == '+' || nbr[i] == '-')

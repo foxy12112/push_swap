@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 12:38:16 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/18 13:03:48 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/18 13:14:07 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,8 @@ void	bubble_sort(int *array, int len)
 
 void	get_indices(t_stack *stack)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < stack->len_start)
