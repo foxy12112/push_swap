@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 12:38:16 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/17 11:48:52 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/18 13:03:48 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	sort_three(t_stack *stack)
 
 	arr = stack->stack_a;
 	if (ft_is_sorted(stack->stack_a, stack->len_a))
+		return ;
+	if (arr[0] < arr[1] && arr[2] > arr[0])
 	{
 		swap_a(stack, "sa");
 		rotate_a(stack, "ra");
@@ -39,7 +41,7 @@ void	sort_five(t_stack *stack)
 {
 	while (stack->len_a > 3)
 	{
-		if (stack->stack_a[0] == 0 || (stack->stack_a[1] == 1
+		if (stack->stack_a[0] == 0 || (stack->stack_a[0] == 1
 				&& stack->len_start == 5))
 			push_b(stack, "pb");
 		else
@@ -73,6 +75,28 @@ void	bubble_sort(int *array, int len)
 				array[j] = array[j + 1];
 				array[j + 1] = tmp;
 				swapped = 1;
+			}
+			j++;
+		}
+		i++;
+	}
+}
+
+void	get_indices(t_stack *stack)
+{
+	int i;
+	int j;
+
+	i = 0;
+	while (i < stack->len_start)
+	{
+		j = 0;
+		while (j < stack->len_a)
+		{
+			if (stack->stack_input[i] == stack->stack_a[j])
+			{
+				stack->stack_input[i] = j;
+				break ;
 			}
 			j++;
 		}

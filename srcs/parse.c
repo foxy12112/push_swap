@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 09:36:15 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/04 13:27:47 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/17 15:33:31 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ char	*parsing(int argc, char **argv, t_stack **stack_a)
 void	parse_string(t_stack **stack_a, char *argv)
 {
 	char		**arg_list;
-	t_stack		new;
 	long int	num;
 	int			i;
 

@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 11:29:42 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/16 13:07:54 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/18 12:47:35 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_is_sorted(int *stack, int len)
 	int	i;
 
 	i = 0;
-	while (i < len - 1)
+	while (i < len)
 	{
 		if (stack[i] > stack[i + 1])
 			return (0);
@@ -49,7 +49,7 @@ void	ft_highest_to_top(t_stack *stack)
 			rotate_b(stack, "rb");
 	else
 		while (stack->stack_b[0] != max)
-			revrot_a(stack, "rrb");
+			revrot_b(stack, "rrb");
 }
 
 void	ft_sort_back(t_stack *stack)
@@ -61,7 +61,7 @@ void	ft_sort_back(t_stack *stack)
 	}
 }
 
-void	ft_sort(t_stack *stack)
+void	sort(t_stack *stack)
 {
 	int	count;
 	int	cmax;

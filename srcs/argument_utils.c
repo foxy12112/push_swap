@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/16 13:32:31 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/18 12:29:16 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ int	*make_double(int argc, char *argv[])
 	strong = ft_split(string, ' ');
 	while (i < ft_wordcount(string, ' '))
 	{
+		if (ft_atol(strong[i]) > 2147483647 || ft_atol(strong[i]) < -2147483648)
+			return (NULL);
 		arr[i] = ft_atoi(strong[i]);
 		i++;
 	}
@@ -82,9 +84,11 @@ int	full_check(int argc, char *argv[], t_stack *stack)
 	str = make_line(argc, argv);
 	if (!str)
 		return (1);
-	stack->stack_a = make_double(argc, argv);
 	if (ft_is_number(str) || ft_check_zero(str))
 		return (1);
+	if (make_double(argc, argv) == NULL)
+		return (1);
+	stack->stack_a = make_double(argc, argv);
 	if (ft_dup_check(stack->stack_a, ft_wordcount(str, ' ')))
 		return (1);
 	while (i < ft_wordcount(str, ' '))
@@ -93,7 +97,20 @@ int	full_check(int argc, char *argv[], t_stack *stack)
 		stack->len_a++;
 	}
 	stack->len_start = stack->len_a;
+	copy_to_initstac(stack);
 	return (0);
 }
 
-//TODO dont put anything else in this file,
+void	copy_to_initstac(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	stack->stack_input = malloc(sizeof(int) * stack->len_a);
+	while (i < stack->len_a)
+	{
+		stack->stack_input[i] = stack->stack_a[i];
+		i++;
+	}
+}
+// TODO dont put anything else in this file, \\fuck this

@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/17 09:58:38 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/18 11:38:34 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_stack
 {
 	int					*stack_a;
 	int					*stack_b;
+	int					*stack_input;
 	int					errornum;
 	int					len_a;
 	int					len_b;
@@ -49,10 +50,12 @@ void	printdisstuff(char *printdis);
 void	ft_highest_to_top(t_stack *stack);
 int		ft_lower_sqrt_search(int b, int low, int high);
 int		ft_lower_sqrt(int nb);
-void	ft_sort(t_stack *stack);
 void	sort_three(t_stack *stack);
 void	sort_five(t_stack *stack);
 void	bubble_sort(int *array, int len);
+void	copy_to_initstac(t_stack *stack);
+void	sort(t_stack *stack);
+void	get_indices(t_stack *stack);
 
 //		operations
 void	rotate_a(t_stack *stack, char *printdis);
