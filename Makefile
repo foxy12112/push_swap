@@ -6,7 +6,7 @@
 #    By: ldick <ldick@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 09:31:08 by ldick             #+#    #+#              #
-#    Updated: 2024/06/16 13:11:45 by ldick            ###   ########.fr        #
+#    Updated: 2024/06/18 17:59:55 by ldick            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ COMPILER = cc
 
 OBJS = $(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror -g
 
 all: $(NAME)
 

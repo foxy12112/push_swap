@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/18 13:15:49 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/19 09:17:29 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,6 @@ typedef struct s_stack
 	int					len_start;
 }	t_stack;
 
-typedef struct s_moves
-{
-	char			*move;
-	struct s_moves	*next;
-	struct s_moves	*prev;
-}	t_moves;
-
 char	*parsing(int argc, char **argv, t_stack **stack_a);
 int		ft_is_number(char *str);
 int		ft_dup_check(int *nbr, int size);
@@ -55,7 +48,8 @@ void	sort_five(t_stack *stack);
 void	bubble_sort(int *array, int len);
 void	copy_to_initstac(t_stack *stack);
 void	sort(t_stack *stack);
-void	get_indices(t_stack *stack);
+void	freeall(t_stack *stack);
+void	free_strong(char **strong);
 
 //		operations
 void	rotate_a(t_stack *stack, char *printdis);
