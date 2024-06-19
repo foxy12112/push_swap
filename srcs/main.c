@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:31:59 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/19 09:56:38 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/19 10:17:38 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,5 @@ int	main(int argc, char *argv[])
 	ft_memcpy(stack.stack_a, stack.stack_input, sizeof(int) * stack.len_start);
 	main_sort(&stack);
 	freeall(&stack);
-	system("leaks push_swap");
 	return (0);
 }
