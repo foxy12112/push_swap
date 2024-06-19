@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/ldick/Documents/push_swap",
-      "program": "/Users/ldick/Documents/push_swap/build/Debug/outDebug"
+      "cwd": "/Users/ldick/Documents/push_swap/srcs",
+      "program": "/Users/ldick/Documents/push_swap/srcs/build/Debug/outDebug"
     }
   ]
 }
