@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:17:10 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/19 09:17:29 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/25 11:12:31 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,11 @@ int		ft_is_number(char *str);
 int		ft_dup_check(int *nbr, int size);
 int		ft_check_zero(char *nbr);
 int		full_check(int argc, char *argv[], t_stack *stack);
-int		ft_is_sorted(int *stack, int len);
+int		ft_is_sorted(t_stack *stack);
 void	printdisstuff(char *printdis);
 void	ft_highest_to_top(t_stack *stack);
 int		ft_lower_sqrt_search(int b, int low, int high);
+void	get_indices(t_stack *stack);
 int		ft_lower_sqrt(int nb);
 void	sort_three(t_stack *stack);
 void	sort_five(t_stack *stack);

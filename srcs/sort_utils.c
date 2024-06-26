@@ -6,20 +6,20 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 11:29:42 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/18 12:47:35 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/25 18:12:08 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_is_sorted(int *stack, int len)
+int	ft_is_sorted(t_stack *stack)
 {
 	int	i;
 
 	i = 0;
-	while (i < len)
+	while (i < stack->len_a - 1)
 	{
-		if (stack[i] > stack[i + 1])
+		if (stack->stack_a[i] > stack->stack_a[i + 1])
 			return (0);
 		i++;
 	}

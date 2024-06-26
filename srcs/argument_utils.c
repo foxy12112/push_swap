@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/19 10:29:31 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/26 15:31:03 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	make_double(int argc, char *argv[], t_stack *stack)
 	while (i < ft_wordcount(string, ' '))
 	{
 		if (ft_atol(strong[i]) > 2147483647 || ft_atol(strong[i]) < -2147483648)
-			return (free(stack->stack_a), free(strong), 1);
+			return (free(strong), 1);
 		stack->stack_a[i] = ft_atoi(strong[i]);
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:31:59 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/19 10:17:38 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/26 15:31:35 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,23 @@ int	main(int argc, char *argv[])
 {
 	t_stack	stack;
 	int		i;
+	int		errnum;
 
 	if (argc == 1)
 		return (1);
 	i = 0;
-	if (full_check(argc, argv, &stack))
+	errnum = full_check(argc, argv, &stack);
+	if (errnum == 1)
 	{
 		ft_printf("error\n");
 		return (1);
 	}
+	if (ft_is_sorted(&stack))
+		return (0);
 	stack.stack_b = malloc(sizeof(int) * stack.len_a);
 	stack.len_b = 0;
-	if (ft_is_sorted(stack.stack_input, stack.len_start))
-		return (free(stack.stack_b), 1);
 	bubble_sort(stack.stack_a, stack.len_a);
+	get_indices(&stack);
 	ft_memcpy(stack.stack_a, stack.stack_input, sizeof(int) * stack.len_start);
 	main_sort(&stack);
 	freeall(&stack);
