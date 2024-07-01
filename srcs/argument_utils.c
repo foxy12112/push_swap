@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/26 15:31:03 by ldick            ###   ########.fr       */
+/*   Updated: 2024/06/27 09:26:29 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	make_double(int argc, char *argv[], t_stack *stack)
 	i = 0;
 	string = make_line(argc, argv);
 	if (!string)
-		return (free(string), 1);
+		return (1);
 	stack->stack_a = malloc((ft_wordcount(string, ' ')) * sizeof(int));
 	if (!stack->stack_a)
 		return (free(string), 1);
@@ -66,7 +66,7 @@ int	make_double(int argc, char *argv[], t_stack *stack)
 	while (i < ft_wordcount(string, ' '))
 	{
 		if (ft_atol(strong[i]) > 2147483647 || ft_atol(strong[i]) < -2147483648)
-			return (free(strong), 1);
+			return (free(string), free_strong(strong), free(strong), 1);
 		stack->stack_a[i] = ft_atoi(strong[i]);
 		i++;
 	}
@@ -86,13 +86,13 @@ int	full_check(int argc, char *argv[], t_stack *stack)
 	stack->len_a = 0;
 	str = make_line(argc, argv);
 	if (!str)
-		return (free(str), 1);
+		return (1);
 	if (ft_is_number(str) || ft_check_zero(str))
 		return (free(str), 1);
 	if (make_double(argc, argv, stack))
-		return (free(stack->stack_a), 1);
+		return (free(str), free(stack->stack_a), 1);
 	if (ft_dup_check(stack->stack_a, ft_wordcount(str, ' ')))
-		return (free(stack->stack_a), 1);
+		return (free(str), free(stack->stack_a), 1);
 	while (i < ft_wordcount(str, ' '))
 	{
 		i++;
