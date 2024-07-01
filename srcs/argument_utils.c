@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 16:33:36 by ldick             #+#    #+#             */
-/*   Updated: 2024/06/27 09:26:29 by ldick            ###   ########.fr       */
+/*   Updated: 2024/07/01 16:12:49 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,8 +109,6 @@ void	copy_to_initstac(t_stack *stack)
 	int	i;
 
 	i = 0;
-	if (stack->stack_input != NULL)
-		free(stack->stack_input);
 	stack->stack_input = malloc(sizeof(int) * stack->len_a);
 	if (!stack->stack_input)
 		return ;

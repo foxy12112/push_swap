@@ -6,7 +6,7 @@
 #    By: ldick <ldick@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 09:31:08 by ldick             #+#    #+#              #
-#    Updated: 2024/06/25 10:20:17 by ldick            ###   ########.fr        #
+#    Updated: 2024/07/01 16:13:46 by ldick            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ COMPILER = cc
 
 OBJS = $(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -g
+# CFLAGS = -Wall -Wextra -Werror -g
 
 all: $(NAME)
 

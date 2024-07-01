@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 07:31:59 by ldick             #+#    #+#             */
-/*   Updated: 2024/07/01 10:39:12 by ldick            ###   ########.fr       */
+/*   Updated: 2024/07/01 16:11:27 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,10 @@ int	main_sort(t_stack *stack)
 int	main(int argc, char *argv[])
 {
 	t_stack	stack;
-	int		i;
 	int		errnum;
 
 	if (argc == 1)
 		return (1);
-	i = 0;
 	errnum = full_check(argc, argv, &stack);
 	if (errnum == 1)
 	{
